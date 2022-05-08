@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "793241968797",
+    "firebase_url": "https://hotel-f13fe-default-rtdb.firebaseio.com",
+    "project_id": "hotel-f13fe",
+    "storage_bucket": "hotel-f13fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793241968797:android:72c7e2afc9ab78778a7474",
+        "android_client_info": {
+          "package_name": "com.example.accommodations_management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793241968797-cl8pftoan72429smi322h974t2m3t5kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW22M_SrXS9o12w0zE6PwL1FipgEUduHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793241968797-cl8pftoan72429smi322h974t2m3t5kb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
