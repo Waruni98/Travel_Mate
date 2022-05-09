@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/idRLBSheet"
+    android:background="@color/purple_200">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agency Name"
+        android:id="@+id/idTVAgencyName"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/idTVAgencyName"
+        android:layout_margin="4dp"
+        android:src="@mipmap/ic_launcher"
+        android:padding="4dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/idIVAgency"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Link"
+        android:id="@+id/idTVLocationLink"
+        android:layout_below="@+id/idTVAgencyName"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/idIVAgency"
+        android:padding="3dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Number"
+        android:id="@+id/idTVContactNumber"
+        android:layout_below="@+id/idTVLocationLink"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/idIVAgency"
+        android:padding="3dp"
+        android:textColor="@color/white"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Description"
+        android:id="@+id/idTVDescription"
+        android:layout_below="@+id/idTVContactNumber"
+        android:layout_margin="4dp"
+        android:layout_toRightOf="@id/idIVAgency"
+        android:padding="3dp"
+        android:textColor="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@id/idTVDescription">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="Edit Details"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:id="@+id/idBtnEdit"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Travel Mate</string>
+    <string name="enter_location_link">Enter Location Link</string>
+    <string name="add_agency">Add Agency</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="enter_logo_image_link">Enter Logo Image LINK</string>
+    <string name="enter_contact_number">Enter Contact Number</string>
+    <string name="enter_agency_name">Enter Agency Name</string>
+    <string name="add_your_agency">Add Your Agency</string>
+</resources>
