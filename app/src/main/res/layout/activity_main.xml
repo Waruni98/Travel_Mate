@@ -34,8 +34,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="54dp"
         android:backgroundTint="@color/purple_200"
-        android:src="@drawable/ic_add2"
-        tools:ignore="ImageContrastCheck,ImageContrastCheck,ImageContrastCheck,SpeakableTextPresentCheck" />
+        android:src="@drawable/ic_add2" />
 
 
 
