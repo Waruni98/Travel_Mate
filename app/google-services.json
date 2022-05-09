@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "95954778770",
+    "firebase_url": "https://textlocations-5dcc2-default-rtdb.firebaseio.com",
+    "project_id": "textlocations-5dcc2",
+    "storage_bucket": "textlocations-5dcc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95954778770:android:02693ddcb9a391d647444b",
+        "android_client_info": {
+          "package_name": "com.example.travel_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95954778770-r5ml9r4c1uncbmoulslgrjtntj92m185.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp9IYL4ijsxY-h-UZewywmCRJTG23UZEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95954778770-r5ml9r4c1uncbmoulslgrjtntj92m185.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
