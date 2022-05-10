@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Accommodations_Management/app/src/main/res/layout/activity_accommodation.xml" value="0.1" />
+        <entry key="..\:/Accommodations_Management/app/src/main/res/layout/activity_adddata.xml" value="0.1" />
+        <entry key="..\:/Accommodations_Management/app/src/main/res/layout/item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/Desktop/Accommodations_Management/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.168" />
         <entry key="..\:/Users/HP/Desktop/Accommodations_Management/app/src/main/res/drawable/btn_top.xml" value="0.182" />
         <entry key="..\:/Users/HP/Desktop/Accommodations_Management/app/src/main/res/drawable/button_login.xml" value="0.2115" />

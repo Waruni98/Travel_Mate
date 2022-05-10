@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         button_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Accommodation.class);
+                Intent intent = new Intent(MainActivity.this, Home.class);
                 startActivity(intent);
 
             }
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, adddata.class);
+                Intent intent = new Intent(MainActivity.this, Dashboard.class);
                 startActivity(intent);
 
             }

@@ -5,10 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import android.content.Intent;
+
 import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -27,8 +28,9 @@ public class Accommodation extends AppCompatActivity {
     RecyclerView recview;
     myadapter adapter;
     FloatingActionButton fb;
-    DatabaseReference database;
+    DatabaseReference databaseReference;
     ArrayList<AccModel> list;
+    FirebaseDatabase firebaseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,27 +38,31 @@ public class Accommodation extends AppCompatActivity {
         setContentView(R.layout.activity_accommodation);
         setTitle("Accommodation..");
 
-        recview = findViewById(R.id.recview);
-        database = FirebaseDatabase.getInstance().getReference("hotel");
+        recview = findViewById(R.id.RecyclerView);
+        firebaseDatabase=FirebaseDatabase.getInstance();
+        databaseReference= firebaseDatabase.getReference("hotel");
         recview.setHasFixedSize(true);
         recview.setLayoutManager(new LinearLayoutManager(this));
-
         list = new ArrayList<>();
         adapter = new myadapter(this, list);
         recview.setAdapter(adapter);
 
-        database.addValueEventListener(new ValueEventListener() {
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot snapshot1: snapshot.getChildren()) ;
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-                AccModel accModel = snapshot.getValue(AccModel.class);
-                list.add(accModel);
+                    AccModel accModel = dataSnapshot.getValue(AccModel.class);
+                    list.add(accModel);
+                }
+                adapter.notifyDataSetChanged();
+                Toast.makeText(Accommodation.this,"successful",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(Accommodation.this,""+error.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }}

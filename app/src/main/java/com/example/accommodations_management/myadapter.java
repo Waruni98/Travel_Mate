@@ -43,7 +43,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class myadapter extends RecyclerView.Adapter<myadapter.MyViewholder> {
 
     Context context;
-
     ArrayList<AccModel>list;
 
     public myadapter(Context context, ArrayList<AccModel> list) {
@@ -54,7 +53,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewholder> {
     @NonNull
     @Override
     public MyViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item,parent,false);
+        View view= LayoutInflater.from(context).inflate(R.layout.item,parent,false);
         return new MyViewholder(view);
 
     }
