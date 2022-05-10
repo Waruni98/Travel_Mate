@@ -23,13 +23,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.FirebaseDatabase;
-import com.orhanobut.dialogplus.DialogPlus;
-import com.orhanobut.dialogplus.DialogPlusBuilder;
-import com.orhanobut.dialogplus.Holder;
-import com.orhanobut.dialogplus.ViewHolder;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -90,8 +84,6 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewholder> {
             description=(TextView)itemView.findViewById(R.id.descriptiontext);
             venue=(TextView)itemView.findViewById(R.id.venuetext);
             contact=(TextView)itemView.findViewById(R.id.contacttext);
-
-
 
 
             edit=(ImageView)itemView.findViewById(R.id.editicon);

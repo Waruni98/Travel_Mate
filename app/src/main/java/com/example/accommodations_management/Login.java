@@ -18,81 +18,43 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
-    private EditText username,
-            password;
-    private Button login;
-    Switch active;
+    private EditText Name;
+    private EditText Password;
+
+    private Button Login;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
-        login = findViewById(R.id.login);
-        active = findViewById(R.id.active);
 
-        login.setOnClickListener(new View.OnClickListener() {
+        Name = (EditText)findViewById(R.id.etName);
+        Password = (EditText)findViewById(R.id.etPassword);
+
+        Login = (Button)findViewById(R.id.btnLogin);
+
+
+
+        Login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-                databaseReference.child("login").addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String input1 = username.getText().toString();
-                        String input2 = password.getText().toString();
-
-                        if (dataSnapshot.child(input1).exists()) {
-                            if (dataSnapshot.child(input1).child("password").getValue(String.class).equals(input2)) {
-                                if (active.isChecked()) {
-                                    if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("admin")) {
-                                        preferences.setDataLogin(Login.this, true);
-                                        preferences.setDataAs(Login.this, "admin");
-                                        startActivity(new Intent(Login.this, Dashboard.class));
-                                    } else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("user")){
-                                        preferences.setDataLogin(Login.this, true);
-                                        preferences.setDataAs(Login.this, "user");
-                                        startActivity(new Intent(Login.this, Dashboard.class));
-                                    }
-                                } else {
-                                    if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("admin")) {
-                                        preferences.setDataLogin(Login.this, false);
-                                        startActivity(new Intent(Login.this, Dashboard.class));
-
-                                    } else if (dataSnapshot.child(input1).child("as").getValue(String.class).equals("user")){
-                                        preferences.setDataLogin(Login.this, false);
-                                        startActivity(new Intent(Login.this, Dashboard.class));
-                                    }
-                                }
-
-                            } else {
-                                Toast.makeText(Login.this, "Kata sandi salah", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            Toast.makeText(Login.this, "Data belum terdaftar", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
+            public void onClick(View view) {
+                validate(Name.getText().toString(), Password.getText().toString());
             }
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if (preferences.getDataLogin(this)) {
-            if (preferences.getDataAs(this).equals("admin")) {
-                startActivity(new Intent(this, Dashboard.class));
-                finish();
-            } else {
-                startActivity(new Intent(this, Dashboard.class));
-                finish();
+    private void validate(String userName, String userPassword){
+        if((userName.equals("Admin")) && (userPassword.equals("1234"))){
+            Intent intent = new Intent(Login.this, Dashboard.class);
+            startActivity(intent);
+        }else{
+            {
+                Login.setEnabled(false);
             }
         }
     }
+
 }

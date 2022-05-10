@@ -54,6 +54,15 @@ public class Home extends AppCompatActivity {
 
         });
 
+        imageView_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, FristActivity.class);
+                startActivity(intent); }
+
+
+        });
+
 
 
 
