@@ -7,13 +7,7 @@ public class AccModel {
 
     }
 
-    public String getSurl() {
-        return surl;
-    }
 
-    public void setSurl(String surl) {
-        this.surl = surl;
-    }
 
     public AccModel(String name, String location, String description, String venue_type, String contact, String surl) {
         this.name = name;
@@ -63,6 +57,14 @@ public class AccModel {
 
     public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    public String getSurl() {
+        return surl;
+    }
+
+    public void setSurl(String surl) {
+        this.surl = surl;
     }
 
 }

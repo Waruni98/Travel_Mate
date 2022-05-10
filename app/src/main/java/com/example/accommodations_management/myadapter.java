@@ -54,7 +54,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewholder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewholder holder, int position) {
-       AccModel AccModel =list.get(position);
+        AccModel AccModel =list.get(position);
         holder.name.setText(AccModel.getName());
         holder.location.setText(AccModel.getLocation());
         holder.description.setText(AccModel.getDescription());

@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-
+        //Validate Admin
     private void validate(String userName, String userPassword){
         if((userName.equals("Admin")) && (userPassword.equals("1234"))){
             Intent intent = new Intent(Login.this, Dashboard.class);
