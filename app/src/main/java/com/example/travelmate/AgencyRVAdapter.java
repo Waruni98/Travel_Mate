@@ -22,7 +22,7 @@ public class AgencyRVAdapter extends RecyclerView.Adapter<AgencyRVAdapter.ViewHo
     int lastPos=-1;
     private agencyClickInterface agencyClickInterface;
 
-    public AgencyRVAdapter(ArrayList<AgencyRVModel> agencyRVModelArrayList, Context context, AgencyRVAdapter.agencyClickInterface agencyClickInterface) {
+    public AgencyRVAdapter(ArrayList<AgencyRVModel> agencyRVModelArrayList, Context context, agencyClickInterface agencyClickInterface) {
         this.agencyRVModelArrayList = agencyRVModelArrayList;
         this.context = context;
         this.agencyClickInterface = agencyClickInterface;
@@ -42,7 +42,7 @@ public class AgencyRVAdapter extends RecyclerView.Adapter<AgencyRVAdapter.ViewHo
         AgencyRVModel agencyRVModel= agencyRVModelArrayList.get(position);
         holder.agencyNameTV.setText(agencyRVModel.getAgencyName());
         Picasso.get().load(agencyRVModel.getLogoLink()).into(holder.agencyIV);
-        setAnimation(holder.itemView,position);
+        setAnimation(holder.itemView,holder.getAdapterPosition());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

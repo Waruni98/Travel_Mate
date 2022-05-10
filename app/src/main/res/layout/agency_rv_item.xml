@@ -25,6 +25,7 @@
             android:id="@+id/agencyNameTV"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:layout_alignParentLeft="true"
             android:layout_below="@+id/idIVAgency"
             android:layout_margin="3dp"
             android:padding="4dp"

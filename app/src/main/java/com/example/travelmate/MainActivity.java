@@ -54,7 +54,13 @@ public class MainActivity extends AppCompatActivity implements  AgencyRVAdapter.
         agencyRVAdapter=new AgencyRVAdapter(agencyRVModelArrayList,this,this);
         agencyRV.setLayoutManager(new LinearLayoutManager( this));
         agencyRV.setAdapter(agencyRVAdapter);
-        addFAB.setOnClickListener(view -> startActivity(new Intent(MainActivity.this,InsertAgencyDetails.class)));
+        addFAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,InsertAgencyDetails.class));
+            }
+        });
+        getAllAgencies();
     }
 
     private void getAllAgencies(){
@@ -102,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements  AgencyRVAdapter.
     }
     @Override
     public void onAgencyClick(int position) {
-
+        displayBottomSheet(agencyRVModelArrayList.get(position));
     }
 
     private void displayBottomSheet(AgencyRVModel agencyRVModel){

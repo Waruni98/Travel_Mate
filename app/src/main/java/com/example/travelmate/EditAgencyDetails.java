@@ -22,7 +22,7 @@ import java.util.Map;
 
 public class EditAgencyDetails extends AppCompatActivity {
 
-    private TextInputEditText agencyNameEdt,locationLinkEdt,contactNumberEdt,logoEdt,descriptionEdt;
+    private TextInputEditText agencyNameEdt,contactNumberEdt,locationLinkEdt,logoEdt,descriptionEdt;
     private Button updateAgencyBtn,deleteAgencyBtn;
     private ProgressBar loadingPB;
     private FirebaseDatabase firebaseDatabase;

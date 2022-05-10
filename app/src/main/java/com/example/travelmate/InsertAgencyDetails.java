@@ -52,7 +52,7 @@ public class InsertAgencyDetails extends AppCompatActivity {
                 String logo = logoEdt.getText().toString();
                 String description = descriptionEdt.getText().toString();
                 agencyId=agencyName;
-                AgencyRVModel agencyRVModel= new AgencyRVModel(agencyId,agencyName,locationLink,contactNumber,logo,description);
+                AgencyRVModel agencyRVModel= new AgencyRVModel(agencyId,agencyName,contactNumber,locationLink,logo,description);
 
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
